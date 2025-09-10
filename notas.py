@@ -16,18 +16,6 @@ media = (nota1 + nota2 + nota3 + nota4) /4
 print(media)
 
 match media:
-    case 7|8|9|10:
-        print(f"Você tirou {media} e passou")
-    case 5|6:
-        print(f"Você tirou {media} e está de recuperação")
-    case 0|1|2|3|4:
-        print(f"Você tirou {media} e reprovou")
-    case _:
-        print("Digite um número válido")
-
-#correção
-
-match media:
     case media if media < 5:
         print(f"Você tirou {media:.2f} e reprovou")
     case media if 5 <= media < 7:
@@ -36,6 +24,7 @@ match media:
         print(f"Você tirou {media:.2f} e passou")
     case _:
         print("Digite um número válido")
+
 
 
     
